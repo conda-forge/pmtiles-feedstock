@@ -1,5 +1,5 @@
 {% set name = "pmtiles" %}
-{% set version = "3.4.0" %}
+{% set version = "3.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,18 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pmtiles-{{ version }}.tar.gz
-  sha256: 4a141eda371677961266fab435ff880e24d83a14fdd427f3a24606743288e459
+  sha256: 48d6d8f317e7ec1f4150a715b1c220777f89f0c1061874a6022255a0859836ee
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   noarch: python
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - python >={{ python_min }}
 
