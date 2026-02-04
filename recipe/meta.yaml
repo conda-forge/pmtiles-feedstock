@@ -1,5 +1,5 @@
 {% set name = "pmtiles" %}
-{% set version = "3.4.1" %}
+{% set version = "3.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pmtiles-{{ version }}.tar.gz
-  sha256: 48d6d8f317e7ec1f4150a715b1c220777f89f0c1061874a6022255a0859836ee
+  sha256: 2b849ede4e006aa0ba9d508a4d77400dd5117d5da74346e057dc9e28bad8e9f0
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
